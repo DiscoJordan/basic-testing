@@ -22,7 +22,7 @@ describe('BankAccount', () => {
     const account = getBankAccount(balance);
     const wifeAccount = getBankAccount(0);
     expect(() => account.transfer(110, wifeAccount)).toThrow(
-      TransferFailedError,
+      InsufficientFundsError,
     );
   });
 
